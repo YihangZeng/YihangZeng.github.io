@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#" class="scroll-to" data-target="#home" data-en="Home" data-cn="首页">Home</a></li>
+            <li><a href="#" class="scroll-to" data-target="#competitions" data-en="Competitions" data-cn="竞赛">Competitions</a></li>
+            <li><a href="#" class="scroll-to" data-target="#research" data-en="Research" data-cn="科研">Research</a></li>
+            <li><a href="#" class="scroll-to" data-target="#courses" data-en="Courses" data-cn="课程">Courses</a></li>
+            <li><a href="#" id="toggle-language" data-en="简体中文" data-cn="English">简体中文</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主页部分 -->
+    <header id="home">
+        <h1 id="intro-header" data-en="Welcome to my personal homepage!" data-cn="欢迎来到我的个人主页！">Welcome to my personal homepage!</h1>
+        <p id="intro-text" data-en="I am Zeng Yihang, an undergraduate student from the 2022 class of the College of Computer Science at Nankai University, majoring in Computer Science. I have excelled in many courses, which has provided a solid foundation for my coding skills. Additionally, I actively participate in competitions and research." data-cn="我是曾奕航，南开大学计算机学院22级本科生，专业是计算机科学与技术。我在众多课程中表现优异，为我的代码能力打下坚实基础，此外还积极参与竞赛和科研">I am Zeng Yihang, an undergraduate student from the 2022 class of the College of Computer Science at Nankai University, majoring in Computer Science. I have excelled in many courses, which has provided a solid foundation for my coding skills. Additionally, I actively participate in competitions and research.</p>
+    </header>
+
+    <!-- 竞赛模块 -->
+    <section id="competitions">
+        <h2 id="competitions-title" data-en="Competitions" data-cn="竞赛">Competitions</h2>
+
+        <!-- 数学建模比赛 -->
+        <div class="module" data-target="#math-modeling-details">
+            <h3 id="math-modeling-title" data-en="Mathematical Modeling Competitions" data-cn="数学建模比赛">Mathematical Modeling Competitions <span class="toggle-icon">▼</span></h3>
+            <div id="math-modeling-details" class="details">
+                <div class="award">
+                    <h4 data-en="Mathematical Contest in Modeling (MCM) - Honorable Mention" data-cn="美国大学生数学建模竞赛 (MCM) - H奖">Mathematical Contest in Modeling (MCM) - Honorable Mention</h4>
+                    <img src="certificate1.jpg" alt="Honorable Mention">
+                    <p data-en="Based on big data, we built a mathematical model for tennis matches using Markov chains to analyze player momentum and performance. Later, we used a random forest model to explore factors affecting momentum and evaluated the model's generalization." data-cn="基于大数据，我们构建了基于马尔科夫链的网球比赛中选手势头与表现的数学模型，而后基于随机森林模型探索影响势头的因素，最后对模型的泛化性进行了评估">Based on big data, we built a mathematical model for tennis matches using Markov chains to analyze player momentum and performance. Later, we used a random forest model to explore factors affecting momentum and evaluated the model's generalization.</p>
+                </div>
+                <div class="award">
+                    <h4 data-en="Asia and Pacific Mathematical Contest in Modeling (APMCM) - Second Prize" data-cn="亚太杯数学建模 - 二等奖">Asia and Pacific Mathematical Contest in Modeling - Second Prize</h4>
+                    <img src="1.jpg" alt="Asia-Pacific Second Prize Certificate">
+                    <p data-en="Using aerodynamic theory and the generalized Lighthill equation, we built a model to find the optimal train curve for minimizing drag and noise, using the PSO optimization algorithm." data-cn="基于空气动力学理论和广义莱特希尔方程，建立寻找最低风阻与最低噪声的火车头曲线模型，使用PSO优化算法进行模型求解">Using aerodynamic theory and the generalized Lighthill equation, we built a model to find the optimal train curve for minimizing drag and noise, using the PSO optimization algorithm.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 生物信息竞赛 -->
+        <div class="module" data-target="#bioinformatics-details">
+            <h3 id="bioinformatics-title" data-en="Bioinformatics Competitions" data-cn="生物信息竞赛">Bioinformatics Competitions <span class="toggle-icon">▼</span></h3>
+            <div id="bioinformatics-details" class="details">
+                <div class="award">
+                    <h4 data-en="Synthetic Biology - Gold Prize" data-cn="合成生物学 - 金奖">Synthetic Biology - Gold Prize</h4>
+                    <img src="3.jpg" alt="Synthetic Biology Gold Prize Certificate">
+                    <img src="2.jpg" alt="Synthetic Biology Gold Prize Certificate1">
+                    <p data-en="We used multiple protein sequence scoring open-source models and integrated learning to build a model for selecting optimal mutant sequences of target proteins with the strongest fluorescence intensity." data-cn="基于多个蛋白质序列评分的开源模型，采用集成学习的方法，构建筛选目标蛋白优秀突变序列的模型，筛选荧光强度最强的突变序列">We used multiple protein sequence scoring open-source models and integrated learning to build a model for selecting optimal mutant sequences of target proteins with the strongest fluorescence intensity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 科研模块 -->
+    <section id="research">
+        <h2 id="research-title" data-en="Research" data-cn="科研">Research</h2>
+
+        <div class="research-project" data-target="#research-project-details">
+            <h3 data-en="Drug Adverse Reaction Prediction Model Development" data-cn="基于脉式图神经网络的不良反应预测模型开发">Drug Adverse Reaction Prediction Model Development <span class="toggle-icon">▼</span></h3>
+            <div id="research-project-details" class="details">
+                <img src="4.jpg" alt="model">
+                <img src="5.jpg" alt="model1">
+                <p data-en="We are working on a project to develop a predictive model for adverse drug reactions using multi-modal, cross-scale biomedical data, and deep learning methods to build an accurate prediction model and uncover biological mechanisms." data-cn="依托多模态、跨尺度的生物医学数据，学界已基于知识图谱、异构网络等结构，构建了一系列计算模型。然而，受限于数据整合不完善、药物表征不充分、信息传播低保真，当前主流模型的性能同临床需求仍有较大差距。对此，我们基于正负样本整合、知识图谱融合、药物表征算法和深度学习方法，构建用于准确预测不良反应的图神经网络模型，并通过反演算法挖掘其中的生物机制。在信息传播过程中，我们的脉式图神经网络如同脉搏一般，在子图上进行一步一步的传播，这在解决信息低保证的同时，也节约了计算资源。">We are working on a project to develop a predictive model for adverse drug reactions using multi-modal, cross-scale biomedical data, and deep learning methods to build an accurate prediction model and uncover biological mechanisms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程模块 -->
+<section id="courses">
+    <h2 id="courses-title" data-en="Courses" data-cn="课程">Courses</h2>
+
+    <!-- 课程内容 -->
+    <div class="course" data-target="#db-details">
+        <h3 data-en="Database Systems" data-cn="数据库系统">Database Systems <span class="toggle-icon">▼</span></h3>
+        <div id="db-details" class="details">
+            <p data-en="Grade: 93/100, 4.0/4.0. Mastered SQL statements, database design principles, normalization, and transaction management. The course project involved adding various database functions to miniob (a mini-database), such as implementing aggregate query statements and join functions, which deepened my understanding of the underlying implementation methods of databases and enhanced my C++ coding skills, while also familiarizing me with the Linux development environment." data-cn="成绩：93/100 4.0/4.0。掌握sql语句、数据库设计原则、规范化与事务管理等知识。课程大作业是在miniob（一个mini数据库）中添加各种数据库功能，例如实现聚合查询语句、实现join功能等，这让我对数据库的底层实现方法有了深入了解，也提升了我的c++代码能力，同时让我熟悉了Linux开发环境">Grade: 93/100, 4.0/4.0. Mastered SQL statements, database design principles, normalization, and transaction management. The course project involved adding various database functions to miniob (a mini-database), such as implementing aggregate query statements and join functions, which deepened my understanding of the underlying implementation methods of databases and enhanced my C++ coding skills, while also familiarizing me with the Linux development environment.</p>
+        </div>
+    </div>
+    <div class="course" data-target="#alg-details">
+        <h3 data-en="Introduction to Algorithms" data-cn="算法导论">Introduction to Algorithms <span class="toggle-icon">▼</span></h3>
+        <div id="alg-details" class="details">
+            <p data-en="Grade: 91/100, 4.0/4.0. Mastered greedy algorithms, divide-and-conquer, dynamic programming, maximum flow, and gained understanding of NP problems. The course project involved implementing an optimal mountain climbing route algorithm using dynamic programming and optimizing complexity with a divide-and-conquer strategy." data-cn="成绩：91/100 4.0/4.0。掌握贪心算法、分治、动态规划、最大流等基本算法问题，也对NP问题有相应了解。在课程大作业中，实现基于动态规划算法的最优登山路线求解算法，并结合分治策略进行复杂度优化">Grade: 91/100, 4.0/4.0. Mastered greedy algorithms, divide-and-conquer, dynamic programming, maximum flow, and gained understanding of NP problems. The course project involved implementing an optimal mountain climbing route algorithm using dynamic programming and optimizing complexity with a divide-and-conquer strategy.</p>
+        </div>
+    </div>
+    <div class="course" data-target="#security-details">
+        <h3 data-en="Software Security" data-cn="软件安全">Software Security <span class="toggle-icon">▼</span></h3>
+        <div id="security-details" class="details">
+            <p data-en="Grade: 91/100, 4.0/4.0. Gained an understanding of various software security vulnerabilities, including buffer overflow, shellcode, and web vulnerabilities, and verified these vulnerabilities in a virtual machine." data-cn="成绩：91/100 4.0/4.0。对各类软件安全漏洞均有所了解，包括溢出漏洞、shellcode、web漏洞等，并通过虚拟机简单验证了相关漏洞。">Grade: 91/100, 4.0/4.0. Gained an understanding of various software security vulnerabilities, including buffer overflow, shellcode, and web vulnerabilities, and verified these vulnerabilities in a virtual machine.</p>
+        </div>
+    </div>
+    <div class="course" data-target="#ai-details">
+        <h3 data-en="Introduction to Artificial Intelligence" data-cn="人工智能导论">Introduction to Artificial Intelligence <span class="toggle-icon">▼</span></h3>
+        <div id="ai-details" class="details">
+            <p data-en="Grade: 90/100, 4.0/4.0. Covered topics such as search algorithms, machine learning (supervised learning, unsupervised learning, reinforcement learning), and deep learning. Course assignments included writing Python code for a Monte Carlo tree-based Reversi game, a reinforcement learning-based robot maze solver, and facial recognition tasks, which improved my Python coding skills." data-cn="成绩：90/100 4.0/4.0。掌握搜索求解、机器学习（监督学习、无监督学习、强化学习）、深度学习等内容。课程作业为编写python代码，包括基于蒙特卡洛树的智能黑白棋、基于强化学习的机器人走迷宫、特征人脸识别等，锻炼了我的python代码能力">Grade: 90/100, 4.0/4.0. Covered topics such as search algorithms, machine learning (supervised learning, unsupervised learning, reinforcement learning), and deep learning. Course assignments included writing Python code for a Monte Carlo tree-based Reversi game, a reinforcement learning-based robot maze solver, and facial recognition tasks, which improved my Python coding skills.</p>
+        </div>
+    </div>
+    <div class="course" data-target="#sjjg-details">
+        <h3 data-en="Data Structures" data-cn="数据结构">Data Structures <span class="toggle-icon">▼</span></h3>
+        <div id="sjjg-details" class="details">
+            <p data-en="Grade: 90/100, 4.0/4.0. Mastered basic data structures such as linked lists, trees, stacks, hash tables, and graphs. The course project involved writing C++ code to implement specific data structures and their applications, enhancing my C++ coding abilities." data-cn="成绩：90/100 4.0/4.0。掌握基本的数据结构，如链表、树、栈、哈希表、图等，课程作业是c++编写代码实现特定的数据结构及其应用，提升了我的c++代码能力">Grade: 90/100, 4.0/4.0. Mastered basic data structures such as linked lists, trees, stacks, hash tables, and graphs. The course project involved writing C++ code to implement specific data structures and their applications, enhancing my C++ coding abilities.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- JavaScript -->
+    <script>
+        // 切换语言
+        $('#toggle-language').click(function () {
+            var newLang = $(this).text();
+            if (newLang === '简体中文') {
+                $('[data-cn]').each(function () {
+                    $(this).text($(this).data('cn'));
+                });
+                $(this).text('English');
+            } else {
+                $('[data-en]').each(function () {
+                    $(this).text($(this).data('en'));
+                });
+                $(this).text('简体中文');
+            }
+        });
+
+        // 平滑滚动
+        $('.scroll-to').click(function () {
+            var target = $($(this).data('target'));
+            $('html, body').animate({
+                scrollTop: target.offset().top - 50
+            }, 500);
+        });
+
+        // 折叠/展开详情
+        $('.module h3, .research-project h3, .course h3').click(function () {
+            var details = $(this).next('.details');
+            details.slideToggle();
+            $(this).find('.toggle-icon').text(details.is(':visible') ? '▲' : '▼');
+        });
+    </script>
+</body>
+</html>
